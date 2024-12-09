@@ -1,0 +1,67 @@
+.about {
+  padding: 50px 0 80px 0;
+  &__cards {
+    @include content-between;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  &__guarantees {
+    padding-top: 70px;
+    @include content-between;
+    align-items: center;
+    gap: 10px;
+  }
+  &__guarantees__image {
+    max-width: 464px;
+    width: 100%;
+  }
+  &__guarantees__texts {
+    max-width: 513px;
+    width: 100%;
+    @include content-column;
+    gap: 15px;
+    font-size: 20px;
+  }
+}
+@media (max-width: 950px) {
+  .about {
+    &__cards {
+      justify-content: space-around;
+      gap: 60px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .about {
+    &__cards {
+      gap: 25px;
+    }
+    &__guarantees__texts {
+      max-width: 332px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .about {
+    padding: 30px 0;
+    &__guarantees {
+      padding-top: 30px;
+      max-width: 440px;
+      flex-direction: column;
+      margin: 0 auto;
+      gap: 0;
+      &::before {
+        content: "В настоящее время мы являемся членом RIPE NCC и, следовательно, обслуживаем только тех пользователей, которые либо являются организацией в зоне обслуживания RIPE NCC, либо управляют сетью в этой же зоне обслуживания. В противном случае, пожалуйста, обратитесь к своему региональному интернет регистратору.";
+      }
+    }
+    &__guarantees__texts {
+      max-width: 100%;
+    }
+    &__guarantees__text1 {
+      display: none;
+    }
+  }
+}

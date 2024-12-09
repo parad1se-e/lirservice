@@ -1,0 +1,14 @@
+.title {
+  padding-bottom: 40px;
+  color: #000;
+  text-align: center;
+  font-size: 37px;
+  font-weight: 600;
+  @media (max-width: 768px) {
+    padding-bottom: 30px;
+  }
+  @media (max-width: 480px) {
+    padding-bottom: 20px;
+    font-size: 32px;
+  }
+}

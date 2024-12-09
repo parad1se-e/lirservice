@@ -1,0 +1,40 @@
+.accordion__button {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  min-width: 25px;
+  min-height: 25px;
+  border-radius: 50%;
+  transition: 0.4s;
+  @include box-shadow;
+  background: url("../icons/arrow.webp") no-repeat center/cover;
+}
+
+.active {
+  width: 50px;
+  height: 50px;
+  min-width: 25px;
+  min-height: 25px;
+  box-shadow: none;
+  background: url("../icons/arrow-active.svg") no-repeat center/cover;
+}
+
+.accordion__panel {
+  color: $font-color;
+  font-weight: 400;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+@media (max-width: 480px) {
+  .accordion__button {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media (max-width: 400px) {
+  .accordion__button {
+    width: 25px;
+    height: 25px;
+  }
+}

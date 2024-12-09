@@ -1,0 +1,47 @@
+.nav {
+  width: 520px;
+  @include content-between;
+  align-items: center;
+  &__link {
+    color: #000;
+    font-size: 21px;
+    font-weight: 500;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: $main-color;
+      transition: 0.3s ease;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .nav {
+    width: 460px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    right: 0;
+    width: auto;
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+    padding: 75px 45px 45px 45px;
+    border-radius: 0px 0px 0px 15px;
+    align-items: flex-start;
+    background-color: $background-color;
+  }
+}
+@media (max-width: 480px) {
+  .nav {
+    padding: 100px 33px 100vh 0;
+    width: 100%;
+    align-items: flex-end;
+    gap: 50px;
+  }
+}

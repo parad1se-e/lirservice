@@ -1,0 +1,21 @@
+@import "./config/config";
+@import "./config/layout";
+@import "./config/mixins";
+@import "./config/reset";
+@import "./config/variables";
+
+@import "./blocks/accordion";
+@import "./blocks/burger";
+@import "./blocks/card";
+@import "./blocks/nav";
+@import "./blocks/title";
+@import "./blocks/_table";
+
+@import "./sections/about";
+@import "./sections/contacts";
+@import "./sections/faq";
+@import "./sections/footer";
+@import "./sections/header";
+@import "./sections/home";
+@import "./sections/steps";
+@import "./sections/_price";

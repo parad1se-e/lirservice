@@ -1,0 +1,40 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: $background-color;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+
+  &__items {
+    height: 86px;
+    @include content-between;
+    align-items: center;
+  }
+  &__logo {
+    z-index: 2;
+    width: 233px;
+    height: 51px;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    &__items {
+      height: 64px;
+    }
+    &__logo {
+      width: 185px;
+      height: 40px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    &__items {
+      height: 56px;
+    }
+    &__logo {
+      width: 150px;
+      height: 32px;
+    }
+  }
+}
