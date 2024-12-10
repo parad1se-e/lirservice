@@ -158,19 +158,18 @@ legend {
   cursor: pointer;
   width: 50px;
   height: 50px;
-  min-width: 25px;
-  min-height: 25px;
   border-radius: 50%;
-  transition: 0.4s;
   box-shadow: 0px 6px 16px 0px rgba(10, 186, 181, 0.3);
   background: url("../icons/arrow.webp") no-repeat center/cover;
+  -webkit-transition: width 0.4s, height 0.4s; /* Safari */
+  -moz-transition: width 0.4s, height 0.4s; /* Firefox */
+  -o-transition: width 0.4s, height 0.4s; /* Opera */
+  transition: width 0.4s, height 0.4s;
 }
 
 .active {
   width: 50px;
   height: 50px;
-  min-width: 25px;
-  min-height: 25px;
   box-shadow: none;
   background: url("../icons/arrow-active.svg") no-repeat center/cover;
 }
@@ -180,6 +179,9 @@ legend {
   font-weight: 400;
   max-height: 0;
   overflow: hidden;
+  -webkit-transition: max-height 0.4s ease-out; /* Safari */
+  -moz-transition: max-height 0.4s ease-out; /* Firefox */
+  -o-transition: max-height 0.4s ease-out; /* Opera */
   transition: max-height 0.4s ease-out;
 }
 

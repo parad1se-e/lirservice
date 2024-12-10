@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /src/
+
+# Разрешение для определённых ботов
+User-agent: Googlebot
+Allow: /public/
+
+# Sitemap для сайта
+Sitemap: https://lirservice.ru/sitemap.xml
