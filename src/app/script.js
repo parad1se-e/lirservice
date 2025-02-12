@@ -3,6 +3,7 @@ const burger = document.querySelector(".burger");
 const header = document.querySelector(".header");
 const nav = document.querySelector(".nav");
 const links = document.querySelectorAll(".header__link");
+const accordionItems = document.querySelectorAll(".faq__item");
 
 for (let i = 0; i < accordion.length; i++) {
   accordion[i].addEventListener("click", function () {
@@ -16,6 +17,21 @@ for (let i = 0; i < accordion.length; i++) {
     }
   });
 }
+
+accordionItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    const button = this.querySelector(".accordion__button");
+    const panel = this.querySelector(".accordion__panel");
+    
+    button.classList.toggle("active");
+    
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+});
 
 burger.addEventListener("click", () => {
   burger.classList.toggle("burger__active");

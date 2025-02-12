@@ -185,6 +185,10 @@ legend {
   transition: max-height 0.4s ease-out;
 }
 
+.faq__item {
+  cursor: pointer;
+}
+
 @media (max-width: 480px) {
   .accordion__button {
     width: 35px;
